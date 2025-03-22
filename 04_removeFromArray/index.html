@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const removeFromArray = function (arr, remove1, remove2=null) {
+        let argArray = [remove1, remove2];
+        let i = 1
+
+      let resultArray = arr
+        argArray.forEach(removeItem);
+        
+        function removeItem(item) {
+               
+
+             
+          
+          console.log(`----------------Round ${i}----------------`)
+          console.log(`array is: ${resultArray}`)
+          console.log(`${item} chosen to remove`);
+
+          let indexOfItem = resultArray.indexOf(item);
+
+          console.log(`Index is ${indexOfItem}`);
+
+          let arrEnd = resultArray.slice(indexOfItem + 1);
+          let arrStart = resultArray.slice(0, indexOfItem);
+
+          console.log(`New end array ${arrEnd} new Start array ${arrStart}`);
+
+          let newArray = arrStart.concat(arrEnd);
+
+          console.log(`New array: ${newArray}`);
+         resultArray = newArray
+          i = i+1
+          console.log(`Result Array: ${resultArray}`)
+          return resultArray
+        } 
+}
+      ;
+    </script>
+  </body>
+</html>
