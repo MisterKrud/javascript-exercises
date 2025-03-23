@@ -1,49 +1,52 @@
 const removeFromArray = function (arr, ...removeArgs) {
+  let resultArray = arr;
+
+  for (let i = 0; i < removeArgs.length; i++) {
+    const itemToRemove = removeArgs[i];
+    console.log(
+      `arr: ${arr} | Result array: ${resultArray} | Removing: ${itemToRemove}`
+    );
     
-    let resultArray = arr
-
-//for (let i=0; i<removeArgs.length; i++) {
-
-  /*  console.log(`------------------loop------------------`)
-
-
-console.log(`arr: ${arr}`)
-console.log(`Result array: ${resultArray}`)
-console.log(`Removal of ${removeArgs[i]}` )
-*/
-   removeArgs.forEach(deleteItem)
+    
+    console.log(`${itemToRemove} is indexed at: ${resultArray.indexOf(removeArgs[i])}`);
+    
+   for (removeArgs[i] in resultArray) {
    
-   function deleteItem(removeArg) {
+      let indexOfItem = resultArray.indexOf(itemToRemove);
+      console.log(`${itemToRemove} is indexed at: ${indexOfItem}`);
+      if (indexOfItem != -1) {
+     
 
-    let itemToRemove = removeArg
- 
-  let indexOfItem = resultArray.indexOf(itemToRemove);
-//console.log(`Indexed at: ${indexOfItem}`)
- 
+      
 
-  let arrEnd = resultArray.slice(indexOfItem + 1);
-  //console.log(`Array end: ${arrEnd}`)
+      
+      console.log(`${itemToRemove} is indexed at: ${indexOfItem}`);
 
-  let arrStart = resultArray.slice(0, indexOfItem);
-  //console.log(`Array start ${arrStart}`)
+     
 
+      let arrEnd = resultArray.slice(indexOfItem + 1);
+      console.log(`Array end: ${arrEnd}`);
+
+      let arrStart = resultArray.slice(0, indexOfItem);
+      console.log(`Array start ${arrStart}`);
+
+      let newArray = arrStart.concat(arrEnd);
+      console.log(`New array: ${newArray}`);
+
+      resultArray = newArray;
+      console.log(`Result array: ${resultArray}`);
+
+     }
+    }
+  }
+
+    
+    let finalArray = resultArray;
   
-
-  let newArray = arrStart.concat(arrEnd);
-  //console.log(`New arra: ${newArray}`)
-
-
-  
- resultArray = newArray
- console.log(`Result array: ${resultArray}`)
-  
- return resultArray
-
-}  
-let finalArray = resultArray;
-
-return finalArray
-}
+    return finalArray;
+  }
+;
 
 // Do not edit below this line
 module.exports = removeFromArray;
+8
