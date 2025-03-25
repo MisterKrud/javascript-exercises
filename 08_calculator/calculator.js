@@ -12,15 +12,14 @@ const subtract = function(num1, num2) {
 
 };
 
-const sum = function(...nums) {
+const sum = function(numArray) {
 
-const numberArray = nums
-let n = 0
-log(numberArray)
-for (i=0; i<numberArray.length; i++) {
-  n += numberArray[i]
-  log(`n: ${n} | numberArray[i]: ${numberArray[i]}`)
-}
+  let n = 0
+  for (let i=0; i<numArray.length; i++) {
+    n += numArray[i]
+  }
+
+
 
 
 
