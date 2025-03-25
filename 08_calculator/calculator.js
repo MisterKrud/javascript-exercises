@@ -6,13 +6,13 @@ const add = function(num1, num2) {
 };
 
 const subtract = function(num1, num2) {
-	if (num1>num2){
+	//if (num1>num2){
   const subtractSolution = (num1 - num2)
   return subtractSolution
-} else  {
-  const subtractSolution = (num2-num1)
-  return subtractSolution
-}
+//} else  {
+  //const subtractSolution = (num2-num1)
+  //return subtractSolution
+//}
 };
 
 const sum = function(...nums) {
