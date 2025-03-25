@@ -1,46 +1,39 @@
-const log = console.log
+const log = console.log;
 
-const add = function(num1, num2) {
-	const addSolution = (num1 + num2)
-  return addSolution
+const add = function (num1, num2) {
+  const addSolution = num1 + num2;
+  return addSolution;
 };
 
-const subtract = function(num1, num2) {
-	
-  const subtractSolution = (num1 - num2)
-  return subtractSolution
-
+const subtract = function (num1, num2) {
+  const subtractSolution = num1 - num2;
+  return subtractSolution;
 };
 
-const sum = function(numArray) {
-
-  let n = 0
-  for (let i=0; i<numArray.length; i++) {
-    n += numArray[i]
+const sum = function (numArray) {
+  let n = 0;
+  for (let i = 0; i < numArray.length; i++) {
+    n += numArray[i];
   }
 
-
-
-
-
-return n
-	
+  return n;
 };
 
-const multiply = function(...nums) {
-let num = 1
-for (let i = 0; i<numberArray.length; i++) {
-  num = num*nums[i]
-}
+const multiply = function (numArray) {
+  let num = 1;
+  for (let i = 0; i < numArray.length; i++) {
+    num = num * numArray[i];
+  }
+  return num;
 };
 
-const power = function() {
-	
+const power = function (num1, num2) {
+  const powSolution = Math.pow(num1, num2);
+  return powSolution
+
 };
 
-const factorial = function() {
-	
-};
+const factorial = function () {};
 // Do not edit below this line
 module.exports = {
   add,
@@ -48,5 +41,5 @@ module.exports = {
   sum,
   multiply,
   power,
-  factorial
+  factorial,
 };
