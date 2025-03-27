@@ -14,7 +14,7 @@ const palindromes = function (word) {
    } else {
        return true
    }
-   
+   //test push
    
    
    };
