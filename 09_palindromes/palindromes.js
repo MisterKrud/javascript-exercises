@@ -1,23 +1,21 @@
 const palindromes = function (word) {
-    let lowerCase = word.toLowerCase()
-    console.log(`word: ${word}`)
-    let lettersOnly = lowerCase.replaceAll(/[^a-z0-9]/g, '')
-    console.log(`lettersOnly: ${lettersOnly}`)
-    let forwardWord = lettersOnly.split('').join('');
-
-    let backwardWord = lettersOnly.split('').reverse().join('');
-
-    console.log(`forwardWord: ${forwardWord} | backwardWord: ${backwardWord}`)
-   
-   if (forwardWord != backwardWord) {
-       return false
-   } else {
-       return true
-   }
-   //test push
-   
-   
-   };
+    const newWord =   word.toLowerCase()
+                          .replace(/[^a-z0-9]/g,'')
+                          
+  
+   const reverseWord = newWord.split('')
+                              .reverse()
+                              .join('')
+  
+     console.log(newWord+' '+reverseWord)                     
+  
+      if(reverseWord===newWord){
+          return true
+      } else {
+          return false
+      }
+  
+     }
    
 
 // Do not edit below this line
